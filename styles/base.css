@@ -1,3 +1,38 @@
 * {
   background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+/*TEXT STYLES
+=======================================*/
+
+h2 {
+  margin-top: 5vh;
+  margin-left: 3vw;
+  font-family: 'Poiret One', sans-serif;
+  width: 70vw;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 4em;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a {
+  text-decoration: none;
+}
+
+/*IMAGE STYLES
+=======================================*/
+
+img {
+  max-width: 100%;
+  width: 30vw;
 }

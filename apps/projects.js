@@ -27,6 +27,7 @@ function Project(name, type, icon, domain, description, site, repo, pic){
 
     var iconPic = document.createElement('img');
     iconPic.setAttribute('src',this.icon);
+    iconPic.className = 'type-icon';
     projectContainer.appendChild(iconPic);
 
     var domainText = document.createElement('p');

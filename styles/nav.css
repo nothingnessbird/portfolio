@@ -1,0 +1,40 @@
+#plus-sign {
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 10vh;
+  color: white;
+  font-size: 100px;
+}
+
+#nav-bar ul {
+  display: none;
+  padding: 1vw;
+  position: fixed;
+  right: 3vw;
+  top: 3vw;
+}
+
+#nav-bar:hover ul {
+  display: block;
+}
+
+#nav-bar li {
+  margin-right: .4em;
+  font-size: 3em;
+  padding: .8em .1em;
+  border-bottom: 2px solid gray;
+}
+
+@media only screen and (min-width: 650px) {
+  #plus-sign {
+    display: none;
+  }
+  #nav-bar ul {
+    display: block;
+  }
+  #nav-bar li {
+    font-size: 2em;
+    padding: 2em 1em;
+  }
+}
