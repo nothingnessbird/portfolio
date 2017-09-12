@@ -15,7 +15,7 @@ function Project(name, type, icon, domain, description, site, repo, pic){
     var div = document.getElementById('projects');
 
     var projectContainer = document.createElement('div');
-    projectContainer.class = 'project-container';
+    projectContainer.className = 'project-container';
 
     var nameText = document.createElement('h2');
     nameText.innerText = this.name;
@@ -34,19 +34,19 @@ function Project(name, type, icon, domain, description, site, repo, pic){
     projectContainer.appendChild(domainText);
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerText = this.domain;
+    descriptionText.innerText = this.description;
     projectContainer.appendChild(descriptionText);
 
     var siteLink = document.createElement('a');
     siteLink.setAttribute('href',this.site);
-    siteLink.class = 'site-links';
-    $('.site-links').text('Check out the site!')
+    siteLink.className = 'site-links';
+    siteLink.innerText = 'Check out the site!';
     projectContainer.appendChild(siteLink);
 
     var repoLink = document.createElement('a');
     repoLink.setAttribute('href',this.repo);
-    repoLink.class = 'repo-links';
-    $('.repo-links').text('Take a look under the hood!')
+    repoLink.className = 'repo-links';
+    repoLink.innerText = 'Take a look under the hood!';
     projectContainer.appendChild(repoLink);
 
     var picImg = document.createElement('img');
@@ -54,6 +54,8 @@ function Project(name, type, icon, domain, description, site, repo, pic){
     projectContainer.appendChild(picImg);
     div.appendChild(projectContainer);
   };
+
+  this.render();
 }
 
 var cfStudy = ['CFStudy','CodeFellows Assignment','../icons/cf.png','Create a website to match a user with study buddies from our pre-existing buddy list, based on the user\'s input','This was our final project for Code 201 at CodeFellows. We were instructed to build a web app with three interlinked HTML pages, use object oriented programming and object constructors, and style our web app using CSS. Together with Ariel, Marco, and Tiger (see the GitHub collaborator page and the README for their info), I made this project in the final week of 201, and presented it on Friday, September 1st 2017.','https://nothingnessbird.github.io/cfstudybuddies/','https://github.com/nothingnessbird/cfstudybuddies','../images/cfStudy.png'];
@@ -71,4 +73,3 @@ function projectMaker() {
 }
 
 projectMaker();
-projectArray[0].render();
