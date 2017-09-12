@@ -13,28 +13,42 @@ function Project(name, type, icon, domain, description, site, repo, pic){
 
   this.render = function(){
     var div = document.getElementById('projects');
+
     var projectContainer = document.createElement('div');
+    projectContainer.class = 'project-container';
+
     var nameText = document.createElement('h2');
     nameText.innerText = this.name;
-    projectContainer.appendChild(name);
+    projectContainer.appendChild(nameText);
+
     var typeText = document.createElement('p');
     typeText.innerText = this.type;
     projectContainer.appendChild(typeText);
+
     var iconPic = document.createElement('img');
     iconPic.setAttribute('src',this.icon);
     projectContainer.appendChild(iconPic);
+
     var domainText = document.createElement('p');
     domainText.innerText = this.domain;
     projectContainer.appendChild(domainText);
+
     var descriptionText = document.createElement('p');
     descriptionText.innerText = this.domain;
     projectContainer.appendChild(descriptionText);
+
     var siteLink = document.createElement('a');
     siteLink.setAttribute('href',this.site);
+    siteLink.class = 'site-links';
+    $('.site-links').text('Check out the site!')
     projectContainer.appendChild(siteLink);
+
     var repoLink = document.createElement('a');
     repoLink.setAttribute('href',this.repo);
+    repoLink.class = 'repo-links';
+    $('.repo-links').text('Take a look under the hood!')
     projectContainer.appendChild(repoLink);
+
     var picImg = document.createElement('img');
     picImg.setAttribute('src',this.pic);
     projectContainer.appendChild(picImg);
@@ -57,3 +71,4 @@ function projectMaker() {
 }
 
 projectMaker();
+projectArray[0].render();
