@@ -1,0 +1,15 @@
+.type-icon {
+  width: 5vw;
+}
+#projects {
+  max-width: 70vw;
+}
+.project-container {
+  margin-bottom: 3vw;
+  border: thick solid gray;
+}
+
+.project-container h2 {
+  max-width: 100%;
+  width: 30vw;
+}

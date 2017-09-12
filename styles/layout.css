@@ -1,0 +1,21 @@
+#largest-text {
+  line-height: 1em;
+  font-size: 10vh;
+}
+#larger-text {
+  line-height: 1.5em;
+  font-size: 6vh;
+}
+.large-text {
+  line-height: 2em;
+  font-size: 4vh;
+}
+#cog {
+  width: 70vw;
+  text-align: center;
+  margin: auto;
+  font-size: 20em;
+}
+header span {
+  display: block;
+}
