@@ -1,4 +1,4 @@
-'use; strict';
+'use strict';
 
 
 function Project(name, type, icon, domain, description, site, repo, pic){
@@ -11,52 +11,6 @@ function Project(name, type, icon, domain, description, site, repo, pic){
   this.repo = repo;
   this.pic = pic;
 
-  this.render = function(){
-    var div = document.getElementById('projects');
-
-    var projectContainer = document.createElement('div');
-    projectContainer.className = 'project-container';
-
-    var nameText = document.createElement('h2');
-    nameText.innerText = this.name;
-    projectContainer.appendChild(nameText);
-
-    var typeText = document.createElement('p');
-    typeText.innerText = this.type;
-    projectContainer.appendChild(typeText);
-
-    var iconPic = document.createElement('img');
-    iconPic.setAttribute('src',this.icon);
-    iconPic.className = 'type-icon';
-    projectContainer.appendChild(iconPic);
-
-    var domainText = document.createElement('p');
-    domainText.innerText = this.domain;
-    projectContainer.appendChild(domainText);
-
-    var descriptionText = document.createElement('p');
-    descriptionText.innerText = this.description;
-    projectContainer.appendChild(descriptionText);
-
-    var siteLink = document.createElement('a');
-    siteLink.setAttribute('href',this.site);
-    siteLink.className = 'site-links';
-    siteLink.innerText = 'Check out the site!';
-    projectContainer.appendChild(siteLink);
-
-    var repoLink = document.createElement('a');
-    repoLink.setAttribute('href',this.repo);
-    repoLink.className = 'repo-links';
-    repoLink.innerText = 'Take a look under the hood!';
-    projectContainer.appendChild(repoLink);
-
-    var picImg = document.createElement('img');
-    picImg.setAttribute('src',this.pic);
-    projectContainer.appendChild(picImg);
-    div.appendChild(projectContainer);
-  };
-
-  this.render();
 }
 
 var cfStudy = ['CFStudy','CodeFellows Assignment','../icons/cf.png','Create a website to match a user with study buddies from our pre-existing buddy list, based on the user\'s input','This was our final project for Code 201 at CodeFellows. We were instructed to build a web app with three interlinked HTML pages, use object oriented programming and object constructors, and style our web app using CSS. Together with Ariel, Marco, and Tiger (see the GitHub collaborator page and the README for their info), I made this project in the final week of 201, and presented it on Friday, September 1st 2017.','https://nothingnessbird.github.io/cfstudybuddies/','https://github.com/nothingnessbird/cfstudybuddies','../images/cfStudy.png'];
@@ -74,3 +28,52 @@ function projectMaker() {
 }
 
 projectMaker();
+
+Project.prototype.render = function() {
+  var div = document.getElementById('projects');
+
+  var projectContainer = document.createElement('div');
+  projectContainer.className = 'project-container';
+
+  var nameText = document.createElement('h2');
+  nameText.innerText = this.name;
+  projectContainer.appendChild(nameText);
+
+  var typeText = document.createElement('p');
+  typeText.innerText = this.type;
+  projectContainer.appendChild(typeText);
+
+  var iconPic = document.createElement('img');
+  iconPic.setAttribute('src',this.icon);
+  iconPic.className = 'type-icon';
+  projectContainer.appendChild(iconPic);
+
+  var domainText = document.createElement('p');
+  domainText.innerText = this.domain;
+  projectContainer.appendChild(domainText);
+
+  var descriptionText = document.createElement('p');
+  descriptionText.innerText = this.description;
+  projectContainer.appendChild(descriptionText);
+
+  var siteLink = document.createElement('a');
+  siteLink.setAttribute('href',this.site);
+  siteLink.className = 'site-links';
+  siteLink.innerText = 'Check out the site!';
+  projectContainer.appendChild(siteLink);
+
+  var repoLink = document.createElement('a');
+  repoLink.setAttribute('href',this.repo);
+  repoLink.className = 'repo-links';
+  repoLink.innerText = 'Take a look under the hood!';
+  projectContainer.appendChild(repoLink);
+
+  var picImg = document.createElement('img');
+  picImg.setAttribute('src',this.pic);
+  projectContainer.appendChild(picImg);
+  div.appendChild(projectContainer);
+}
+
+for (var i = 0; i < projectArray.length; i++) {
+  projectArray[i].render();
+}
