@@ -1,0 +1,38 @@
+span {
+  display: block;
+  color: white;
+}
+h2 {
+  margin-top: 5vh;
+  margin-left: 3vw;
+  font-family: 'Poiret One', sans-serif;
+  width: 70vw;
+
+}
+#largest-text {
+  line-height: 1em;
+  font-size: 10vh;
+}
+#larger-text {
+  line-height: 1.5em;
+  font-size: 6vh;
+}
+.large-text {
+  line-height: 2em;
+  font-size: 4vh;
+}
+#plus-sign {
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 10vh;
+  color: white;
+  font-size: 100px;
+}
+#cog {
+  width: 70vw;
+  text-align: center;
+  margin: auto;
+  font-size: 20em;
+  color: white;
+}
