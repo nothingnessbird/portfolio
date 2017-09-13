@@ -22,8 +22,8 @@ function projectMaker() {
 projectMaker();
 
 Project.prototype.render = function() {
-  var $newProject = $('#template').clone();
-  $newProject.attr('id','').addClass('project-display');
+  var $newProject = $('.template').clone();
+  $newProject.attr('class','').addClass('project-display');
   $newProject.find('.site-pic')
       .attr('src',this.pic);
   $newProject.find('h2')
@@ -42,6 +42,7 @@ Project.prototype.render = function() {
       .text(this.domain);
   $newProject.find('.project-description')
       .html(this.description);
+  $('#projects').append($newProject);
 }
 
 for (var i = 0; i < projectArray.length; i++) {

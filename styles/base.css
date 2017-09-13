@@ -36,3 +36,9 @@ img {
   max-width: 100%;
   width: 30vw;
 }
+
+/*TEMPLATE STYLES
+=======================================*/
+.template {
+  display: none;
+}
