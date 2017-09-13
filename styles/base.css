@@ -1,7 +1,12 @@
 * {
-  background-color: black;
   color: white;
   box-sizing: border-box;
+}
+body {
+  background-image: url('../images/phonebackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*TEXT STYLES
@@ -35,4 +40,10 @@ a {
 img {
   max-width: 100%;
   width: 30vw;
+}
+
+/*TEMPLATE STYLES
+=======================================*/
+.template {
+  display: none;
 }
