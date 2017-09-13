@@ -21,9 +21,10 @@
 
 #nav-bar li {
   margin-right: .4em;
-  font-size: 3em;
+  font-size: 2em;
   padding: .8em .1em;
   border-bottom: 2px solid gray;
+  background-color: black;
 }
 
 @media only screen and (min-width: 650px) {
