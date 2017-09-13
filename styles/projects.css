@@ -1,15 +1,20 @@
-.type-icon {
+.icon-pic {
   width: 5vw;
 }
-#projects {
-  max-width: 70vw;
-}
-.project-container {
-  margin-bottom: 3vw;
+
+.project-display {
   border: thick solid gray;
+  margin: auto;
+  margin-bottom: 6vh;
 }
 
-.project-container h2 {
+#projects {
+  max-width: 70vw;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.project-display h2 {
   max-width: 100%;
   width: 30vw;
 }
