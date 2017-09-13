@@ -27,9 +27,28 @@
         </ul>
       </nav>
     </header>
-    <div id="projects"></div>
-    <script type="text/javascript" src="/apps/projects.js"></script>
-    <script type="text/javascript" src="/apps/render.js"></script>
+    <main>
+      <section id="projects">
+        <article class="template">
+          <header>
+            <img src="#" alt="picture of site">
+            <h2>Title</h2>
+            <div class="byline">
+              Type:<h3></h3> <img src="#" alt="picture to represent type of project">
+              <address class="site-links"><a href="">site</a></address>
+              <address class="repo-links"><a href="">repo</a></address>
+              Completed <time pubdate datetime="2000-01-01">Publish Time</time>
+            </div>
+          </header>
+          <section>
+            Project Domain:<p></p>
+          </section>
+          <section class="project-description"></section>
+        </article>
+      </section>
+  </main>
+    <script type="text/javascript" src="/apps/rawProjectData.js"></script>
+    <script type="text/javascript" src="/apps/projectRender.js"></script>
   </body>
 
 </html>
