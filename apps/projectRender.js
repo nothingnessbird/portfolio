@@ -1,27 +1,20 @@
 'use strict';
 
-function Project(name, type, icon, domain, description, site, repo, pic,pubDate){
-  this.name = name;
-  this.type = type;
-  this.icon = icon;
-  this.domain = domain;
-  this.description = description;
-  this.site = site;
-  this.repo = repo;
-  this.pic = pic;
-  this.pubDate = pubDate;
+var projects = [];
 
+function Project(rawProjObj){
+  this.name = rawProjObj.name;
+  this.type = rawProjObj.type;
+  this.icon = rawProjObj.icon;
+  this.domain = rawProjObj.domain;
+  this.description = rawProjObj.description;
+  this.site = rawProjObj.site;
+  this.repo = rawProjObj.repo;
+  this.pic = rawProjObj.pic;
+  this.pubDate = rawProjObj.pubDate;
 }
 
-function projectMaker() {
-  for (var i = 0; i < projectArray.length; i++) {
-    projectArray[i] = new Project(projectArray[i][0],projectArray[i][1],projectArray[i][2],projectArray[i][3],projectArray[i][4],projectArray[i][5],projectArray[i][6],projectArray[i][7]);
-  }
-}
-
-projectMaker();
-
-Project.prototype.render = function() {
+Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
   $newProject.attr('class','').addClass('project-display');
   $newProject.find('.site-pic')
@@ -42,9 +35,19 @@ Project.prototype.render = function() {
       .text(this.domain);
   $newProject.find('.project-description')
       .html(this.description);
-  $('#projects').append($newProject);
+  $newProject.find('time')
+      .html('about ' + parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000) + ' days ago');
+  return $newProject;
 }
 
-for (var i = 0; i < projectArray.length; i++) {
-  projectArray[i].render();
-}
+rawProjectData.sort(function(a,b) {
+  return (new Date(b.pubDate)) - (new Date(a.pubDate));
+});
+
+rawProjectData.forEach(function(projObj) {
+  projects.push(new Project(projObj));
+});
+
+projects.forEach(function(project) {
+  $('#projects').append(project.toHtml());
+});
