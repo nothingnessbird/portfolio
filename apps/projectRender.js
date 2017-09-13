@@ -1,6 +1,6 @@
 'use strict';
 
-function Project(name, type, icon, domain, description, site, repo, pic){
+function Project(name, type, icon, domain, description, site, repo, pic,pubDate){
   this.name = name;
   this.type = type;
   this.icon = icon;
@@ -9,6 +9,7 @@ function Project(name, type, icon, domain, description, site, repo, pic){
   this.site = site;
   this.repo = repo;
   this.pic = pic;
+  this.pubDate = pubDate;
 
 }
 
@@ -21,48 +22,26 @@ function projectMaker() {
 projectMaker();
 
 Project.prototype.render = function() {
-  var div = document.getElementById('projects');
-
-  var projectContainer = document.createElement('div');
-  projectContainer.className = 'project-container';
-
-  var nameText = document.createElement('h2');
-  nameText.innerText = this.name;
-  projectContainer.appendChild(nameText);
-
-  var typeText = document.createElement('p');
-  typeText.innerText = this.type;
-  projectContainer.appendChild(typeText);
-
-  var iconPic = document.createElement('img');
-  iconPic.setAttribute('src',this.icon);
-  iconPic.className = 'type-icon';
-  projectContainer.appendChild(iconPic);
-
-  var domainText = document.createElement('p');
-  domainText.innerText = this.domain;
-  projectContainer.appendChild(domainText);
-
-  var descriptionText = document.createElement('p');
-  descriptionText.innerText = this.description;
-  projectContainer.appendChild(descriptionText);
-
-  var siteLink = document.createElement('a');
-  siteLink.setAttribute('href',this.site);
-  siteLink.className = 'site-links';
-  siteLink.innerText = 'Check out the site!';
-  projectContainer.appendChild(siteLink);
-
-  var repoLink = document.createElement('a');
-  repoLink.setAttribute('href',this.repo);
-  repoLink.className = 'repo-links';
-  repoLink.innerText = 'Take a look under the hood!';
-  projectContainer.appendChild(repoLink);
-
-  var picImg = document.createElement('img');
-  picImg.setAttribute('src',this.pic);
-  projectContainer.appendChild(picImg);
-  div.appendChild(projectContainer);
+  var $newProject = $('#template').clone();
+  $newProject.attr('id','').addClass('project-display');
+  $newProject.find('.site-pic')
+      .attr('src',this.pic);
+  $newProject.find('h2')
+      .text(this.name);
+  $newProject.find('h3')
+      .text(this.type);
+  $newProject.find('.icon-pic')
+      .attr('src',this.icon);
+  $newProject.find('.site-links')
+      .attr('href',this.site)
+      .text('Check out the site!');
+  $newProject.find('.repo-links')
+      .attr('href',this.repo)
+      .text('Take a look under the hood!');
+  $newProject.find('p')
+      .text(this.domain);
+  $newProject.find('.project-description')
+      .html(this.description);
 }
 
 for (var i = 0; i < projectArray.length; i++) {
