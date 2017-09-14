@@ -5,6 +5,7 @@ var projects = [];
 function Project(rawProjObj){
   this.name = rawProjObj.name;
   this.type = rawProjObj.type;
+  this.category = rawProjObj.category;
   this.icon = rawProjObj.icon;
   this.domain = rawProjObj.domain;
   this.description = rawProjObj.description;
@@ -16,7 +17,9 @@ function Project(rawProjObj){
 
 Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
-  $newProject.attr('class','').addClass('project-display');
+  $newProject.removeClass()
+      .addClass('project-display')
+      .attr('data-category', this.category);
   $newProject.find('.site-pic')
       .attr('src',this.pic);
   $newProject.find('h2')
