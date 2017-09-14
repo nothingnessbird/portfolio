@@ -9,25 +9,36 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/projects.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/about.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/8c6cd8555b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
-      <h2> <span id="largest-text">Hi</span><span id="larger-text">I'm Kinley.</span> <span class="large-text"> A junior developer </span> <span class="large-text">and eager student</span> <span class="large-text">learning to code.</span></h2>
-      <i id="cog" class="fa fa-cog" aria-hidden="true"></i>
+      <div id="main-header">
+        <h2> <span id="largest-text">Hi</span><span id="larger-text">I'm Kinley.</span> <span class="large-text"> A junior developer </span> <span class="large-text">and eager student</span> <span class="large-text">learning to code.</span></h2>
+      </div>
+      <div id="cog">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
       <nav id="nav-bar">
-        <i id="plus-sign" class="fa fa-plus" aria-hidden="true"></i>
+        <div id="plus-sign">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
         <ul>
-          <li class="nav-links"><a href="#">About</a></li>
-          <li class="nav-links"><a href="#">Projects</a></li>
+          <li id="home-tab" class="nav-links">Home</li>
+          <li id="about-tab" class="nav-links">About</li>
+          <li id="projects-tab" class="nav-links">Projects</li>
           <li><a href="http://github.com/nothingnessbird" target="_blank" class="nav-links">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/kinley-ramson-41474514a/" target="_blank" class="nav-links">LinkedIn</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <section id="about">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
       <section id="projects">
         <article class="template">
           <header>
@@ -50,6 +61,7 @@
   </main>
     <script type="text/javascript" src="/apps/rawProjectData.js"></script>
     <script type="text/javascript" src="/apps/projectRender.js"></script>
+    <script type="text/javascript" src="/apps/pageView.js"></script>
   </body>
 
 </html>
