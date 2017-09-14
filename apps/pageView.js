@@ -9,12 +9,6 @@ $('#home-tab').on('click', function(event){
     margin: '10vh',
     fontSize: '100px'
   })
-  // $('#cog').animateRotate(90, {
-  //   duration: 1337,
-  //   easing: 'linear',
-    // complete: function () {},
-    // step: function () {}
-  // });
 })
 
 $('#about-tab').on('click', function(event){
