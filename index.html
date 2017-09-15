@@ -15,22 +15,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <script id="post-template" type="text/x-handlebars-template">
-      <article class="template">
+      <article>
         <header>
-          <img class="site-pic" src="#" alt="picture of site">
-          <h2>Title</h2>
+          <h2>{{ name }}</h2>
           <div class="byline">
-            Type:<h3></h3> <img class="icon-pic" src="#" alt="picture to represent type of project">
-            <address><a class="site-links" href="">site</a></address>
-            <address><a class="repo-links" href="">repo</a></address>
-            Completed <time pubdate datetime="2000-01-01">Publish Time</time>
+            Type:<h3>{{ type }}</h3> <img class="icon-pic" src="{{ icon }}" alt="picture to represent type of project">
+            <address><a class="site-links" href="{{ site }}">Check out the site!</a></address>
+            <address><a class="repo-links" href="{{ repo }}">Take a look under the hood!</a></address>
+            Completed <time pubdate datetime="2000-01-01">{{{ publishTime }}}</time>
           </div>
         </header>
         <section>
-          <h4>Project Domain:</h4><p></p>
+          <h4>Project Domain:</h4><p>{{ domain }}</p>
         </section>
         <h4>Project Description</h4>
-        <section class="project-description"></section>
+        <section class="project-description">{{{ description }}}</section>
       </article>
     </script>
   </head>
