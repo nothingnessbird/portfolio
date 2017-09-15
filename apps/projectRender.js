@@ -24,7 +24,9 @@ Project.prototype.toHtml = function() {
   this.publishTime = `about ${this.daysAgo} days ago`;
 
   var rawHtml = template(this);
-  $('#projects').append(rawHtml);
+
+  //hacky code below is the only way to jQuery the background image of the individual article
+  $('#projects').append($(rawHtml).css('background-image', `url(${this.pic})`));
 
 }
 
