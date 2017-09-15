@@ -11,15 +11,39 @@
 #projects {
   max-width: 70vw;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.35);
   display: none;
 }
 
-.project-display h2 {
+.project-content h2 {
   max-width: 100%;
-  width: 30vw;
+  margin: 2vh auto;
+}
+
+.project-content h3 {
+  font-size: .75em;
+  display: inline;
+  padding-left: 2vw;
 }
 
 article {
   background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.40);
+  border: 5px solid white;
+  margin-bottom: 6vh;
+  text-align: center;
+}
+
+.project-preview {
+  width: 70vw;
+}
+
+.project-content {
+  width: 100%;
+  top: 0;
+}
+
+.site-links {
+  display: block;
+  padding-top: 2vh;
 }

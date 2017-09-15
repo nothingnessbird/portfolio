@@ -25,8 +25,7 @@ Project.prototype.toHtml = function() {
 
   var rawHtml = template(this);
 
-  //hacky code below is the only way to jQuery the background image of the individual article
-  $('#projects').append($(rawHtml).css('background-image', `url(${this.pic})`));
+  $('#projects').append($(rawHtml));
 
 }
 

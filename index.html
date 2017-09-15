@@ -16,20 +16,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <script id="post-template" type="text/x-handlebars-template">
       <article>
-        <header>
-          <h2>{{ name }}</h2>
-          <div class="byline">
-            Type:<h3>{{ type }}</h3> <img class="icon-pic" src="{{ icon }}" alt="picture to represent type of project">
-            <address><a class="site-links" href="{{ site }}">Check out the site!</a></address>
-            <address><a class="repo-links" href="{{ repo }}">Take a look under the hood!</a></address>
-            Completed <time pubdate datetime="2000-01-01">{{{ publishTime }}}</time>
-          </div>
-        </header>
-        <section>
-          <h4>Project Domain:</h4><p>{{ domain }}</p>
-        </section>
-        <h4>Project Description</h4>
-        <section class="project-description">{{{ description }}}</section>
+        <img class="project-preview" src="{{ pic }}" alt="">
+        <div class="project-content">
+          <header>
+            <h2>{{ name }}</h2>
+            <div class="byline">
+              Type:<h3>{{ type }}</h3> <img class="icon-pic" src="{{ icon }}" alt="picture to represent type of project">
+              <a target="_blank" class="site-links" href="{{ site }}">Check out the site!</a>
+              <address><a target="_blank" class="repo-links" href="{{ repo }}">Take a look under the hood!</a></address>
+              Completed <time pubdate datetime="2000-01-01">{{{ publishTime }}}</time>
+            </div>
+          </header>
+          <section>
+            <h4>Project Domain:</h4><p>{{ domain }}</p>
+          </section>
+          <h4>Project Description</h4>
+          <section class="project-description">{{{ description }}}</section>
+        </div>
       </article>
     </script>
   </head>
