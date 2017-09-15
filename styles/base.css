@@ -1,5 +1,4 @@
 * {
-  color: white;
   box-sizing: border-box;
 }
 body {
@@ -7,6 +6,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: white;
+}
+
+@media only screen and (min-width: 650px) {
+  body {
+    background-image: url('../images/desktopbackground.jpg');
+  }
 }
 
 /*TEXT STYLES
@@ -31,7 +37,17 @@ li {
 =======================================*/
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: white;
+}
+a:visited {
+  color: rgb(154, 11, 242);
+}
+a:hover, li:hover {
+  color: rgb(9, 244, 237);
+}
+a:active {
+  color: rgb(154, 11, 242);
 }
 
 /*IMAGE STYLES

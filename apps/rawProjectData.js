@@ -22,7 +22,7 @@ var rawProjectData = [
     description:    '<p>This is a project from CodeFellows 201, in which we were given product images and instructed to make an app that displayed three at a time for customer to choose between, tracked how many times each was shown and clicked, kept that information in local storage, and displayed the information to the user using graphs.</p><p>Charts.js was used to create the interactive graphs displaying the user\'s behavior data. A random number function was designed to select the images to display.</p>',
     site:         'https://nothingnessbird.github.io/busmall/',
     repo:           'https://github.com/nothingnessbird/busmall',
-    pic:            '',
+    pic:            '../images/busmall.png',
     pubDate:        '2017-08-27'
   },
   {
@@ -34,7 +34,7 @@ var rawProjectData = [
     description:    '<p>This is a CodeFellows 201 assignment, where we were given a picture and a problem domain, and asked to design and build a site for a fictional cookie store owner, both to display his store info to the public, and to let him estimate average cooke sales per hour at each location.</p><p>There are some fun CSS styles, especially on the internal page on the table of data. There is a random number generator that makes random estimated cookie sales per hour, a function to calculate 12 hour clock displays using 24 hour times, and a totals calculator function.</p>',
     site:             'https://nothingnessbird.github.io/cookie_stand/',
     repo:            'https://github.com/nothingnessbird/cookie_stand',
-    pic:            '',
+    pic:            '../images/cookies.png',
     pubDate:        '2017-08-20'
   }
 ]

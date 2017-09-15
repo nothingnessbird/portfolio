@@ -12,7 +12,7 @@
   padding: 1vw;
   position: fixed;
   right: 3vw;
-  top: 3vw;
+  top: 15vw;
 }
 
 #nav-bar:hover ul {
@@ -27,6 +27,15 @@
   background-color: black;
 }
 
+#nav-bar li:hover {
+  cursor: pointer;
+}
+
+#nav-bar a, li {
+  text-decoration: none;
+}
+
+
 @media only screen and (min-width: 650px) {
   #plus-sign {
     display: none;
@@ -35,7 +44,18 @@
     display: block;
   }
   #nav-bar li {
-    font-size: 2em;
-    padding: 2em 1em;
+    font-size: 1.5em;
+    padding: 1em .5em;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+  #nav-bar li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  #nav-bar ul {
+    top: 0;
   }
 }
