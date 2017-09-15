@@ -13,6 +13,26 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/8c6cd8555b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
+    <script id="post-template" type="text/x-handlebars-template">
+      <article class="template">
+        <header>
+          <img class="site-pic" src="#" alt="picture of site">
+          <h2>Title</h2>
+          <div class="byline">
+            Type:<h3></h3> <img class="icon-pic" src="#" alt="picture to represent type of project">
+            <address><a class="site-links" href="">site</a></address>
+            <address><a class="repo-links" href="">repo</a></address>
+            Completed <time pubdate datetime="2000-01-01">Publish Time</time>
+          </div>
+        </header>
+        <section>
+          <h4>Project Domain:</h4><p></p>
+        </section>
+        <h4>Project Description</h4>
+        <section class="project-description"></section>
+      </article>
+    </script>
   </head>
   <body>
     <header>
@@ -39,25 +59,7 @@
       <section id="about">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </section>
-      <section id="projects">
-        <article class="template">
-          <header>
-            <img class="site-pic" src="#" alt="picture of site">
-            <h2>Title</h2>
-            <div class="byline">
-              Type:<h3></h3> <img class="icon-pic" src="#" alt="picture to represent type of project">
-              <address><a class="site-links" href="">site</a></address>
-              <address><a class="repo-links" href="">repo</a></address>
-              Completed <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
-          </header>
-          <section>
-            <h4>Project Domain:</h4><p></p>
-          </section>
-          <h4>Project Description</h4>
-          <section class="project-description"></section>
-        </article>
-      </section>
+      <section id="projects"></section>
   </main>
     <script type="text/javascript" src="/apps/rawProjectData.js"></script>
     <script type="text/javascript" src="/apps/projectRender.js"></script>
