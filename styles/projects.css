@@ -2,6 +2,14 @@
   width: 5vw;
 }
 
+h4 {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .project-display {
   border: thick solid gray;
   margin: auto;
@@ -22,13 +30,17 @@
 .project-content h3 {
   font-size: .75em;
   display: inline;
-  padding-left: 2vw;
+  padding-left: 1vw;
+}
+
+.project-content p {
+  padding: 1vh 2vw;
 }
 
 article {
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.40);
+  background-color: rgba(0, 0, 0, 0.60);
   border: 5px solid white;
   margin-bottom: 6vh;
   text-align: center;
@@ -46,4 +58,26 @@ article {
 .site-links {
   display: block;
   padding-top: 2vh;
+}
+
+@media only screen and (min-width: 650px) {
+  .icon-pic {
+    height: 3vh;
+    width: auto;
+  }
+  p {
+    font-size: 3vh;
+    margin: 1vh auto;
+  }
+  h4 {
+    font-size: 4vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 7vh;
+  }
+  .byline {
+    font-size: 2vh;
+  }
 }
