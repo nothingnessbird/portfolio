@@ -5,6 +5,7 @@
   margin: 10vh;
   color: white;
   font-size: 100px;
+  padding: 0;
 }
 
 #nav-bar ul {
@@ -22,7 +23,7 @@
 #nav-bar li {
   margin-right: .4em;
   font-size: 2em;
-  padding: .8em .1em;
+  padding: 3vh .1em;
   border-bottom: 2px solid gray;
   background-color: black;
 }
@@ -42,6 +43,8 @@
   }
   #nav-bar ul {
     display: block;
+    top: 0;
+    right: 0;
   }
   #nav-bar li {
     font-size: 1.5em;
@@ -52,10 +55,16 @@
 @media screen and (orientation: landscape) and (max-width: 900px) {
   #nav-bar li {
     display: inline-block;
+    color: rgb(149, 219, 244);
     margin: 0;
     padding: 0;
+    border: medium groove rgb(149, 219, 244);
+  }
+  #nav-bar a {
+    color: rgb(149, 219, 244);
   }
   #nav-bar ul {
     top: 0;
+    left: 0;;
   }
 }
