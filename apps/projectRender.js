@@ -37,22 +37,26 @@ Project.loadAll = function(rawData) {
   });
 }
 
+function appendProjects() {
+  Project.all.forEach(function(project){
+    $('#projects').append(project.toHtml());
+  });
+}
+
 Project.fetchAll = function() {
   if (localStorage.rawData) {
 
     Project.loadAll(JSON.parse(localStorage.rawData));
 
-    Project.all.forEach(function(project){
-      $('#projects').append(project.toHtml());
-    });
+    appendProjects();
 
   } else {
     $.get('../data/projectJSON.json', function(data){
       localStorage.rawData = JSON.stringify(data);
+
       Project.loadAll(JSON.parse(localStorage.rawData));
-      Project.all.forEach(function(project){
-        $('#projects').append(project.toHtml());
-      });
+
+      appendProjects();
     });
   }
 }
