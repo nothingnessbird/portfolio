@@ -38,7 +38,7 @@
   </head>
   <body>
     <header>
-      <div id="main-header">
+      <div id="main-header" class="tab-content">
         <h2> <span id="largest-text">Hi</span><span id="larger-text">I'm Kinley.</span> <span class="large-text"> A junior developer </span> <span class="large-text">and eager student</span> <span class="large-text">learning to code.</span></h2>
       </div>
       <div id="cog">
@@ -49,9 +49,9 @@
           <i class="fa fa-plus" aria-hidden="true"></i>
         </div>
         <ul>
-          <li id="home-tab" class="nav-links">Home</li>
-          <li id="about-tab" class="nav-links">About</li>
-          <li id="projects-tab" class="nav-links">Projects</li>
+          <li data-tab="main-header" id="home-tab" class="nav-links tab">Home</li>
+          <li data-tab="about" id="about-tab" class="nav-links tab">About</li>
+          <li data-tab="projects" id="projects-tab" class="nav-links tab">Projects</li>
           <li><a href="http://github.com/nothingnessbird" target="_blank" class="nav-links">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/kinley-ramson-41474514a/" target="_blank" class="nav-links">LinkedIn</a></li>
           <li><a href="https://www.codefellows.org" target="_blank">Code<br>Fellows</a></li>
@@ -59,24 +59,16 @@
       </nav>
     </header>
     <main>
-      <section id="about">
+      <section id="about" class="tab-content">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </section>
-      <section id="projects" class="tab-content">
-        <!-- <div>
-          <ul id="filters">
-            <li>
-              <select id="category-filter">
-                <option value="">-- Filter by Category --</option>
-              </select>
-            </li>
-          </ul>
-        </div> -->
-      </section>
+      <section id="projects" class="tab-content"></section>
     </main>
-    <script type="text/javascript" src="/apps/rawProjectData.js"></script>
     <script type="text/javascript" src="/apps/projectRender.js"></script>
     <script type="text/javascript" src="/apps/pageView.js"></script>
+    <script type="text/javascript">
+      Project.fetchAll();
+    </script>
   </body>
 
 </html>
