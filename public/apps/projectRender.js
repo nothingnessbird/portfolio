@@ -1,5 +1,6 @@
 'use strict';
 
+//this file to become and iife
 
 function Project(rawProjObj){
   this.name = rawProjObj.name;
