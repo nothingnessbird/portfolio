@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/about.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://use.fontawesome.com/8c6cd8555b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
@@ -62,12 +63,19 @@
       <section id="about" class="tab-content">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </section>
-      <section id="projects" class="tab-content"></section>
+      <section id="projects" class="tab-content">
+        <section id="project-display"></section>
+        <section id="languages">
+          Languages Used:
+          <ul></ul>
+        </section>
+      </section>
     </main>
     <script type="text/javascript" src="/apps/projectRender.js"></script>
     <script type="text/javascript" src="/apps/pageView.js"></script>
     <script type="text/javascript">
-      Project.fetchAll();
+      app.pageView();
+      app.Project.fetchAll();
     </script>
   </body>
 
