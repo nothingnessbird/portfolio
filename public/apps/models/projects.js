@@ -30,15 +30,6 @@ var app = app || {};
     })
   }
 
-  function appendProjects() {
-    Project.all.forEach(function(project){
-      $('#project-display').append(project.toHtml());
-    });
-    Project.languageData().forEach(function(language){
-      $('#languages ul').append($(`<li>${language}</li>`));
-    });
-  }
-
   Project.languageData = function() {
     return Project.all
       .reduce(function(aggregator, project){
@@ -52,12 +43,12 @@ var app = app || {};
       }, []);
   }
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(callback) {
     if (localStorage.rawData) {
 
       Project.loadAll(JSON.parse(localStorage.rawData));
 
-      appendProjects();
+      callback();
 
     } else {
       $.get('../data/projectJSON.json', function(data){
@@ -65,7 +56,7 @@ var app = app || {};
 
         Project.loadAll(JSON.parse(localStorage.rawData));
 
-        appendProjects();
+        callback();
       });
     }
   }
