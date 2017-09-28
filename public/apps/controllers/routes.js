@@ -2,10 +2,10 @@
 
 var app = app || {};
 
-page('/');
+page('/', app.showHome);
 
-page('/about');
+page('/about', app.showAbout);
 
-page('/projects');
+page('/projects', app.showProjects);
 
 page();
