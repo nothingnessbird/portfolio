@@ -50,9 +50,9 @@
           <i class="fa fa-plus" aria-hidden="true"></i>
         </div>
         <ul>
-          <li data-tab="main-header" id="home-tab" class="nav-links tab">Home</li>
-          <li data-tab="about" id="about-tab" class="nav-links tab">About</li>
-          <li data-tab="projects" id="projects-tab" class="nav-links tab">Projects</li>
+          <li data-tab="main-header" id="home-tab" class="nav-links tab"><a href="/">Home</a></li>
+          <li data-tab="about" id="about-tab" class="nav-links tab"><a href="/about">About</a></li>
+          <li data-tab="projects" id="projects-tab" class="nav-links tab"><a href="/projects">Projects</a></li>
           <li><a href="http://github.com/nothingnessbird" target="_blank" class="nav-links">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/kinley-ramson-41474514a/" target="_blank" class="nav-links">LinkedIn</a></li>
           <li><a href="https://www.codefellows.org" target="_blank">Code<br>Fellows</a></li>
@@ -73,6 +73,7 @@
     </main>
     <script type="text/javascript" src="/apps/models/projectRender.js"></script>
     <script type="text/javascript" src="/apps/controllers/pageView.js"></script>
+    <script src="/apps/controllers/routes.js"></script>
     <script type="text/javascript">
       app.pageView();
       app.Project.fetchAll();
