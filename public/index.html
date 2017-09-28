@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/projects.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/about.css">
+    <link rel="stylesheet" href="/styles/repos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/8c6cd8555b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -36,6 +37,24 @@
         </div>
       </article>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{ name }}</h3>
+        </a>
+        {{#if description}}
+          <p>Description: {{ description }}</p>
+        {{/if}}
+        <p>Languages Used:</p>
+        <ul>
+          {{#each languagesUsed}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        <p>Created: {{ created }}</p>
+        <p>Last updated: {{ lastUpdateTime }}</p>
+      </li>
+    </script>
   </head>
   <body>
     <header>
@@ -50,9 +69,10 @@
           <i class="fa fa-plus" aria-hidden="true"></i>
         </div>
         <ul>
-          <li data-tab="main-header" id="home-tab" class="nav-links tab"><a href="/">Home</a></li>
-          <li data-tab="about" id="about-tab" class="nav-links tab"><a href="/about">About</a></li>
-          <li data-tab="projects" id="projects-tab" class="nav-links tab"><a href="/projects">Projects</a></li>
+          <li id="home-tab" class="nav-links tab"><a href="/">Home</a></li>
+          <li id="about-tab" class="nav-links tab"><a href="/about">About</a></li>
+          <li id="projects-tab" class="nav-links tab"><a href="/projects">Projects</a></li>
+          <li id="repos-tab" class="nav-links tab"><a href="/repos">Repos</a></li>
           <li><a href="http://github.com/nothingnessbird" target="_blank" class="nav-links">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/kinley-ramson-41474514a/" target="_blank" class="nav-links">LinkedIn</a></li>
           <li><a href="https://www.codefellows.org" target="_blank">Code<br>Fellows</a></li>
@@ -70,12 +90,18 @@
           <ul></ul>
         </section>
       </section>
+      <section id="repos" class="tab-content">
+        <span class="large-text">Repos I have made, contributed to, or forked:</span>
+        <ul id="repo-list"></ul>
+      </section>
     </main>
     <script type="text/javascript" src="/apps/models/projects.js"></script>
+    <script type="text/javascript" src="/apps/models/repo.js"></script>
     <script type="text/javascript" src="/apps/views/projectView.js"></script>
     <script type="text/javascript" src="/apps/controllers/homeController.js"></script>
     <script type="text/javascript" src="/apps/controllers/aboutController.js"></script>
     <script type="text/javascript" src="/apps/controllers/projectController.js"></script>
+    <script type="text/javascript" src="/apps/controllers/repoController.js"></script>
     <script type="text/javascript" src="/apps/controllers/routes.js"></script>
   </body>
 
