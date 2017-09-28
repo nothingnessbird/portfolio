@@ -8,4 +8,6 @@ page('/about', app.showAbout);
 
 page('/projects', app.showProjects);
 
+page('/repos', app.showRepos);
+
 page();
